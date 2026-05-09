@@ -1,0 +1,154 @@
+/* Global text styling */
+* {
+    font-family: var(--heading);
+    text-align: center;
+}
+
+/* Shared form controls */
+input,
+select,
+button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #d6c7b8;
+    background: white;
+    color: #2d2d2d;
+    font-size: 16px;
+}
+
+/* Shared flex layouts */
+.table-search-area,
+.pagination-controls,
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Shared spacing */
+.table-search-area,
+.pagination-controls {
+    gap: 12px;
+}
+
+/* Search area spacing */
+.table-search-area {
+    margin: 24px 0;
+}
+
+/* Unified control height */
+.table-search-select,
+.table-search-input,
+.save-button {
+    height: 42px;
+    box-sizing: border-box;
+}
+
+/* Save button styling */
+.save-button {
+    background: #d67f2b;
+    color: white;
+    border: none;
+}
+
+/* Validation error message */
+.table-error-message {
+    color: #c0392b;
+    font-size: 15px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+/* Main table container */
+.data-table {
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #f8f6f2;
+    border-radius: 16px;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+/* Table header cells */
+.data-table th {
+    background: #d67f2b;
+    color: white;
+    font-size: 18px;
+}
+
+/* Header title and sort spacing */
+.header-content {
+    gap: 6px;
+}
+
+/* Sorting buttons container */
+.sort-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sorting buttons */
+.sort-buttons button {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: white;
+    opacity: 0.4;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Active sorting state */
+.sort-buttons button.active-sort {
+    opacity: 1;
+}
+
+/* Shared table cell styling */
+.data-table th,
+.data-table td {
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Table body cells */
+.data-table td {
+    border-top: 1px solid #e5ddd5;
+}
+
+/* Inputs inside table cells */
+.data-table input:not([type="checkbox"]),
+.data-table select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Delete button width */
+.delete-row-button {
+    width: 90px;
+}
+
+/* Pagination spacing */
+.pagination-controls {
+    margin-top: 24px;
+}
+
+/* Pagination buttons */
+.pagination-controls button {
+    background: #2d2d2d;
+    color: white;
+    border: none;
+}
+
+/* Disabled pagination state */
+.pagination-controls button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Pagination page indicator */
+.pagination-controls span {
+    color: #d67f2b;
+}
