@@ -1,3 +1,10 @@
+// Validation support:
+// Centralizes table validation logic, including unique
+// identifiers for columns and rows, and validation of cell
+// values according to each column type and constraints.
+// This keeps the table data consistent and prevents invalid
+// values from being saved.
+
 import type {
     TableColumn,
     TableRow

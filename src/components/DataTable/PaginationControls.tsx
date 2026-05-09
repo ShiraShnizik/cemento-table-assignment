@@ -1,3 +1,8 @@
+// Optimization:
+// Pagination improves performance and user experience
+// by rendering only a small subset of rows at a time
+// instead of rendering the entire dataset at once.
+
 // Props received by the PaginationControls component
 interface PaginationControlsProps {
     currentPage: number;

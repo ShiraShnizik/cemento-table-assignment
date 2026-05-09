@@ -1,3 +1,8 @@
+// Added feature:
+// Two-step search improves usability by first selecting
+// a specific column and then filtering rows only within
+// that column, making searches more focused and efficient.
+
 import type { TableColumn } from "../../types/tableTypes";
 
 // Props received by the SearchAndSaveControls component

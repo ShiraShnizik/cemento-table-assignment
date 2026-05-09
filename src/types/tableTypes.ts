@@ -1,3 +1,8 @@
+// Type safety:
+// Uses a union type to restrict supported column
+// rendering types, while enabling browser-native
+// features such as built-in date pickers.
+
 // Supported column rendering types
 export type ColumnType =
     | "text"
@@ -13,6 +18,11 @@ export interface SelectOption {
     // Value stored in the data
     value: string;
 }
+
+// Column-specific configuration:
+// Optional properties allow each column
+// to define only the behaviors, features,
+// and validation rules relevant to its type.
 
 export interface TableColumn {
     // Unique column identifier

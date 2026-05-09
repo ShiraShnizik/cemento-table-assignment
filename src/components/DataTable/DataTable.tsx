@@ -33,7 +33,12 @@ interface DataTableProps {
 
 const ROWS_PER_PAGE = 5;
 
-// Local storage key used to persist table data
+// Persistence feature:
+// Saving the table in localStorage allows the application
+// to preserve user changes even after refreshing or reopening
+// the browser, improving user experience and preventing data loss.
+
+// Local storage key used to persist table data.
 const STORAGE_KEY = "data-table";
 
 export default function DataTable({
@@ -83,6 +88,11 @@ export default function DataTable({
     // Stores the current search input value
     const [searchTerm, setSearchTerm] = useState("");
 
+    // Added feature:
+    // Table sorting allows users to quickly organize rows
+    // in ascending or descending order based on a selected column,
+    // making large datasets easier to read and analyze.
+
     // Stores the column currently used for sorting
     const [sortColumn, setSortColumn] =
         useState<string | null>(null);
@@ -93,6 +103,11 @@ export default function DataTable({
 
     // Stores the currently displayed page number
     const [currentPage, setCurrentPage] = useState(1);
+
+    // Validation feedback:
+    // Error messages provide clear feedback when
+    // user input is invalid, helping users understand
+    // what must be corrected before saving changes.
 
     // Stores the current validation error message
     const [errorMessage, setErrorMessage] = useState("");
@@ -199,12 +214,23 @@ export default function DataTable({
         alert("Changes saved locally");
     };
 
+    // Added feature:
+    // Row deletion allows users to dynamically remove
+    // unnecessary entries from the table,
+    // improving table management and usability.
+
     // Removes a row from the table
     const handleDeleteRow = (rowId: string) => {
         setTableData((prevData) => 
             prevData.filter((row) => row.id !== rowId)
         );
     };
+
+    // Optimization:
+    // useMemo memoizes expensive derived calculations such as
+    // filtering, sorting, and pagination, preventing unnecessary
+    // recomputation on every render and improving performance
+    // when working with larger datasets.
 
     // Calculates the columns that should currently be displayed
     const filteredColumns = useMemo(() => {
