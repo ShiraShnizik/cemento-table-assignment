@@ -54,6 +54,6 @@ data: Array.from({ length: 20 }, (_, index) => ({
     status: faker.helpers.arrayElement(statuses).value,
     approved: faker.datatype.boolean(),
     plannedStart: faker.date.future().toISOString().slice(0, 10),
-    delayDays: faker.number.int({ min: 0, max: 60 })
+    delayDays: faker.number.int({ min: 0, max: 365 })
 }))
 };
